@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="LunchCheck">
+    <head>
+        <title>For lunch check</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/angular.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <div ng-controller="LunchCheckController">
+            <div>
+            <h1>Lunch Check</h1><br>
+            Enter the list items for lunch (comma seperated) : 
+            <input type="text" ng-model = "itemList" style="border-color: {{colr}}"><br>
+            Do NOT consider an empty item.i.e., , or ,, as an item towards to the count<br>
+            <button ng-click = "checkItem();">Check If Too Much</button>
+            <div style="color: {{colr}}">
+                {{output}}
+            </div>
+            </div> 
+        </div>
+        
+    </body>
+</html>
